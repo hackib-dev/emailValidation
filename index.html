@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Apparel</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"crossorigin="anonymous"/>
+</head>
+
+<body class="body">
+    <main class="all_content">
+
+        <div class="left">
+            <div class="logo">
+                    <img class="content_logo" src="./assets/images/logo.svg">
+            </div>
+
+            <div class="left_contents">
+                <div class="heading">
+                    <h1><span>WE'RE</span> COMING SOON</h1>
+                </div>
+
+                <div class="contents">
+                    <p>
+                        Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
+                    </p>
+                </div>
+
+                <div class="mobile-image">
+                    <img class="mobile_img" src="./assets/images/hero-mobile.jpg">
+                </div>
+
+                <div class="email_input">
+                    <img class="icon" src="./assets/images/icon-arrow.svg" onclick="validateEmail()">
+                    <input type="email" placeholder="Email Address" name="email" class="email" id="email"><br>
+                    <span class=email_error id="email_error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="right"> 
+  
+            <img class="image" src="./assets/images/hero-desktop.jpg">
+        </div>
+
+    </main>
+</body>
+
+<script>
+
+    function validateEmail(){
+
+       var email= document.getElementById('email').value;
+       var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       var emailValidation = document.getElementById('email_error');
+  
+       if (email.match(emailFormat)){
+        document.getElementById('email').innerHTML = ""
+        document.getElementById('email').style.borderColor = "green"
+        document.getElementById('email').style.background= "";
+        emailValidation.innerHTML = "Email validation successful"
+        emailValidation.style.paddingLeft = "20px"
+        emailValidation.style.fontSize = "small"
+        emailValidation.style.color = "green"
+       
+       }
+      
+       else{
+        emailValidation.innerHTML = "Please provide a valid email";
+        emailValidation.style.paddingLeft = "20px";
+        emailValidation.style.fontSize = "small";
+        emailValidation.style.color = "red";
+        document.getElementById('email').style.borderColor = "red";
+        document.getElementById('email').style.background= "url(./assets/images/icon-error.svg) 78% no-repeat";
+       }
+
+       
+
+
+
+    }
+</script>
+
+</html>
