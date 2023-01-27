@@ -7,9 +7,6 @@
       box-sizing: border-box;
   }
 
-.body{
-    overflow: hidden;
-}
 
 .all_content
 {
@@ -17,13 +14,13 @@
     display: flex;
     background-image: url(../images/bg-pattern-desktop.svg);
     background-size:  50%;
+    max-height: 100vh;;
 }
 
 .left{
     display: flex;
     flex-direction: column;
     margin: 50px auto;
-    
 }
 
 .left_contents{
@@ -86,13 +83,13 @@ input[placeholder]::placeholder{
 }
 
 .image{
-    height: 75%;
+    height: 100%;
     float: right;
 }
 
 @media screen and (max-width:990px) {
 
-    .body{overflow: auto;}
+    /* .body{overflow: auto;} */
 
     .all_content
     {
