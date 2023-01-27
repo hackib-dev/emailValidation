@@ -144,6 +144,7 @@ input[placeholder]::placeholder{
 
     .email_input{
         order: 4;
+        padding-bottom: 20px;
     }
 
     .mobile-image{
